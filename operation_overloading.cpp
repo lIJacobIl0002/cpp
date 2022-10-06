@@ -5,7 +5,6 @@
 // operator overloading
 std::ostream& operator<<(std::ostream& cout, std::fstream& file_object) {
     std::string nigger;
-    int i = 0;
     while (true) {
         std::getline(file_object, nigger);
         // file_object >> character;
@@ -28,6 +27,7 @@ std::istream& operator>>(std::istream& cin, std::fstream& file_object) {
     // once we have the file contents the user wants
     file_object << file_contents;
 
+    return cin;
 };
 
 using namespace std;
@@ -40,11 +40,9 @@ int main() {
         return 1;
     }
 
-    // cin >> file;
+    // cin >> file; // this can also be used
 
     cout << file;
-
-    // file << "sub boys";
 
     file.close();
 
